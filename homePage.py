@@ -40,20 +40,21 @@ def page1():
 
 @app.route('/page2/')
 def page2():
-    #Hasem's Page
+    #Hasem's Page: use p2template
     
     return render_template('p2Template.html')
 
 
 @app.route('/page3/')
 def page3():
-    #Justin's Page
+    #Justin's Page: use p3template
     
     return render_template('p3Template.html')
 
 
 @app.route('/page4/')
 def page4():
+    #Jaden's Page: use p4template
     
     return render_template('p4Template.html')
 
