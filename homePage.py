@@ -28,6 +28,7 @@ def home():
 
 @app.route('/page1/')
 def page1():
+    #Autumn's Page
     myImage = Image.open('static/jelly.jpg')
     background = Image.open("static/csumb.jpg")
     negatives(myImage)
@@ -39,13 +40,15 @@ def page1():
 
 @app.route('/page2/')
 def page2():
+    #Hasem's Page
     
     return render_template('p2Template.html')
 
 
 @app.route('/page3/')
 def page3():
-
+    #Justin's Page
+    
     return render_template('p3Template.html')
 
 
@@ -55,7 +58,7 @@ def page4():
     return render_template('p4Template.html')
 
 
-
+#Any extra functions go down here
 
 def sepia(im):
     new_list=[]
