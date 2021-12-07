@@ -19,7 +19,9 @@ Running the program:
   Paste the below into the command line to run the application
 
   $env:FLASK_APP = “homePage.py"
+  
   $env:FLASK_DEBUG = "1"
+  
   flask run
 
 Opening the application: 
