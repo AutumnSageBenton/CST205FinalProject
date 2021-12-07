@@ -19,6 +19,7 @@ Getting your machine set up in the command line:
   pip install bootstrap-flask
 
 Running the program: 
+
   
   Ensure your inside the CST205FinalProject folder in the command line
   
@@ -28,10 +29,13 @@ Running the program:
   $env:FLASK_APP = “homePage.py"
   
   $env:FLASK_DEBUG = "1"
+  
   flask run
 
 
+
 Opening the application: 
+
   
   After a few seconds the operating system will display some text in the command line. 
   
