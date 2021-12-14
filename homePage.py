@@ -30,7 +30,6 @@ def home():
 def page1():
     #Autumn's Page
     myImage = Image.open('static/jelly.jpg')
-    background = Image.open("static/csumb.jpg")
     negatives(myImage)
     greys(myImage)
 
