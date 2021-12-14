@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>lab 5 Pixabay search</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+
+    </style>
+  </head>
+  <body>
+ <header>
+    <h1 class="p-4 text-center bg-primary">Pixabay Image Search</h1>
+    </header>
+
+    <div>
+      
+    <input type="text" id="search" placeholder="Type a keyword">
+    <br><br>
+    Layout:
+   <input type="radio" name="layout" value="vertical"> Vertical
+   
+   <input type="radio" name="layout" value="horizontal"> Horizontal
+
+    <br>
+    <button id="searchBtn"> Search </button>
+
+   <!-- <figure><!-- Placeholder to display image here <img src="" alt="Image that was searched" id="displayIMG"> 
+   -->
+   
+
+    <div id = "collection">
+		
+    
+
+    </div>
+   
+   
+
+   </div>
+
+   <div class="flex-column">
+     <a href="https://pixabay.com/"><img src="https://pixabay.com/static//img/logo.svg" alt="Pixabay logo" class="w-"></a>
+     Free Images
+   </div>
+
+    
+<script >
+      $("#searchBtn").on("click",imageSearch);
+
+     
+      
+      
+     async function imageSearch(){
+        const len = $("#search").val().length;
+        console.log("Searching image ...")
+        console.log(len)
+        
+        if(len >= 3){
+        const textInput= $("#search").val();
+        //console.log(textInput)
+
+        const  layout = $("input[name=layout]:checked").val();
+        console.log(layout)
+
+     
+        let url= `https://pixabay.com/api/?key=5589438-47a0bca778bf23fc2e8c5bf3e&q=${textInput}&orientation=${layout}
+        `
+        let data= await getData(url);
+        
+        // var a= _.shuffle(data.hits);
+        
+        // var b= _.shuffle(data.hits);
+        // var c= _.shuffle(data.hits);
+        // var d= _.shuffle(data.hits);
+        // var e= _.shuffle(data.hits);
+        var a= Math.floor(Math.random()*data.hits.length);
+        console.log(a);
+        var b= Math.floor(Math.random()*data.hits.length);
+        var c= Math.floor(Math.random()*data.hits.length);
+        var d= Math.floor(Math.random()*data.hits.length);
+        var e= Math.floor(Math.random()*data.hits.length);
+          
+
+        const image_1= {
+          likes: data.hits[a].likes,
+          url:data.hits[a].webformatURL
+        }
+  
+    console.log(image_1.url);
+        const image_2= {
+          likes: data.hits[b].likes,
+          url:data.hits[b].webformatURL
+        }
+        const image_3= {
+          likes: data.hits[c].likes,
+         
+          url:data.hits[c].webformatURL
+        }
+        const image_4= {
+          likes: data.hits[d].likes,
+          url:data.hits[d].webformatURL
+        }
+        const image_5= {
+          likes: data.hits[e].likes,
+          url:data.hits[e].webformatURL
+        }
+      
+        $("#collection").html(
+          `<figure><figcaption>Likes: ${image_1.likes}</figcaption><img src="${image_1.url}"></figure>
+          <figure><figcaption>Likes: ${image_2.likes}</figcaption><img src="${image_2.url}"></figure>
+          <figure><figcaption>Likes: ${image_3.likes}</figcaption><img src="${image_3.url}"></figure>
+          <figure><figcaption>Likes: ${image_4.likes}</figcaption><img src="${image_4.url}"></figure>
+          <figure><figcaption>Likes: ${image_5.likes}</figcaption><img src="${image_5.url}"></figure>
+          `);
+        }
+        else
+        {
+          alert("Too short bro type again three characters at least");;
+        }
+     
+      }
+	
+      async function getData(url){
+        let response = await fetch(url);
+        let data= await response.json();
+        return data;
+      }
+
+    </script>
+  </body>
