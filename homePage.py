@@ -20,7 +20,7 @@ bootstrap = Bootstrap(app)
 
 @app.route('/')
 def home():
-    #random.shuffle(info)
+    random.shuffle(info)
     title = info[0][2]
     temp = info[0][3]
     return render_template('homeTemplate.html', name=title)
