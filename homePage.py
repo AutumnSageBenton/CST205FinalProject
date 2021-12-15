@@ -51,13 +51,6 @@ def page3():
     return render_template('p3Template.html')
 
 
-@app.route('/page4/')
-def page4():
-    #Jaden's Page: use p4template
-    
-    return render_template('p4Template.html')
-
-
 #Any extra functions go down here
 
 def sepia(im):
