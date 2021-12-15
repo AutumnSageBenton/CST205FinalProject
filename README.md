@@ -1,5 +1,6 @@
 # CST 205-01 Final Project
 Welcome to the Boredom Fixation Station created by Autumn Benton, Justin Ho, Jaden Bussard, and Hasem Trejo. 
+
 Officially completed on 12/15/2021
 
 In this documentation you will find the steps necessary to set up your operating system and the command lines to run the code. 
