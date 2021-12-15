@@ -22,6 +22,8 @@ Getting your machine set up in the command line:
   pip install flask_sqlalchemy
   
   pip install flask_login
+  
+  pip install --upgrade Pillow
 
 
 Running the program: 
