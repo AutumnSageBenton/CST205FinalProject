@@ -18,6 +18,8 @@ Getting your machine set up in the command line:
   pip install bootstrap-flask
   
   pip install flask_sqlalchemy
+  
+  pip install flask_login
 
 
 Running the program: 
