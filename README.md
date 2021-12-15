@@ -13,10 +13,12 @@ Getting your machine set up in the command line:
   
   Install Flask and Bootstrap Flask by pasting the below into the command line
 
-
   pip install flask
   
   pip install bootstrap-flask
+  
+  pip install flask_sqlalchemy
+
 
 Running the program: 
 
