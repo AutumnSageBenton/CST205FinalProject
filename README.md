@@ -27,7 +27,7 @@ Getting your machine set up in the command line:
 Running the program: 
 
   
-  Ensure your inside the CST205FinalProject folder in the command line
+  Ensure you're inside the CST205FinalProject folder in the command line
   
   Paste the below into the command line to run the application
 
